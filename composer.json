@@ -1,0 +1,40 @@
+{
+    "name": "conduit-ui/email",
+    "description": "Provider-agnostic Laravel email client — Gmail first, extensible to Outlook/IMAP",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12.0|^13.0",
+        "saloonphp/saloon": "^4.0",
+        "spatie/laravel-data": "^4.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^3.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConduitUI\\Email\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ConduitUI\\Email\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConduitUI\\Email\\EmailServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable"
+}
