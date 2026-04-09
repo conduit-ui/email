@@ -1,0 +1,58 @@
+{
+    "name": "conduit-ui/email",
+    "description": "Provider-agnostic email client for Laravel with Gmail driver",
+    "keywords": ["conduit-ui", "laravel", "email", "gmail"],
+    "homepage": "https://github.com/conduit-ui/email",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordan Partridge",
+            "email": "jordan@partridge.rocks",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^12.0|^13.0",
+        "saloonphp/saloon": "^4.0",
+        "spatie/laravel-data": "^4.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConduitUI\\Email\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ConduitUI\\Email\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConduitUI\\Email\\EmailServiceProvider"
+            ],
+            "aliases": {
+                "Email": "ConduitUI\\Email\\Facades\\Email"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
